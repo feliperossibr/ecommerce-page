@@ -7,13 +7,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+
   <title>Ecommerce | Page</title>
 
   <link rel="stylesheet" href="styles/global.css">
 </head>
   <body>
-    <main>
-      
+    <main class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="left-card">
+            
+            <!-- Botão Hamburger -->
+            <button class="menu-toggle" aria-label="Abrir menu" id="menu-toggle">
+              <img src="assets/icons/icon-menu.svg" alt="">
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+              <img src="assets/logo.svg" alt="logo sneakers">
+            </div>
+
+            <!-- Menu -->
+          <nav class="nav-menu" id="nav-menu">
+
+          <!-- Botão fechar -->
+          <button id="menu-close" class="menu-close hidden" aria-label="Fechar menu">
+            <img src="assets/icons/icon-close.svg" alt="">
+          </button>
+          
+          <!-- Menu -->
+            <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          </div>
+
+          <!-- Sombra do menu -->
+          <div id="menu-overlay" class="menu-overlay hidden"></div>
+
+          <div class="right-card">
+            <!-- Carrinho -->
+            <div class="cart">
+              <img src="assets/icons/icon-cart.svg" alt="">
+            </div>
+            <!-- Perfil -->
+            <div class="perfil">
+              <img src="assets/images/image-avatar.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </header>
     </main>
+  <script src="scripts.js"></script>
   </body>
 </html>

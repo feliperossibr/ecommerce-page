@@ -3,6 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
@@ -22,7 +23,156 @@
 }
 
 html,
-body,
-main {
+body {
+  background-color: var(--light-grayish-blue);
   font-family: "Kumbh Sans", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.perfil img{
+  width: 2rem;
+  height: auto;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000066;
+  display: none;
+  z-index: 10;
+}
+
+.menu-overlay.visible {
+  display: block;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--light-grayish-blue);
+  width: 100%;
+  flex-direction: column;
+  display: none;
+  box-shadow: 0 4px 8px #0000001a;
+  z-index: 20;
+}
+
+.nav-menu.active {
+  display: flex;
+  width: 65%;
+  height: 100vh;
+  padding: 5rem 2rem;
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.nav-menu a {
+  color: var(--very-dark-blue);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color .3s ease-in-out;
+}
+
+.nav-menu a:hover {
+  color: var(--dark-grayish-blue);
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+}
+
+.menu-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 25;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 732px) {
+  .menu-toggle,
+  .menu-close {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .nav-menu ul {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .left-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .right-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+  }
+
+  .perfil img {
+    width: 3rem;
+  }
 }
