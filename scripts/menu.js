@@ -20,4 +20,3 @@ function closeMenu() {
 toggleButton.addEventListener("click", openMenu);
 closeButton.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
-
