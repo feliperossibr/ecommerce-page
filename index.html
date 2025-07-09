@@ -52,9 +52,20 @@
 
           <div class="right-card">
             <!-- Carrinho -->
-            <button class="cart">
+            <button class="cart-toggle" aria-label="Abrir carrinho" id="cart-toggle">
               <img src="assets/icons/icon-cart.svg" alt="">
+              <span class="cart-badge hidden" id="cart-badge">0</span>
             </button>
+
+            <!-- Menu Carrinho -->
+          <div class="cart-menu hidden" id="cart-menu">
+            <h2>Cart</h2>
+            <div class="separator-cart"></div>
+            <div class="cart-content" id="cart-content">
+              <p class="empty-cart">Your cart is empty.</p>
+            </div>
+          </div>
+
             <!-- Perfil -->
             <div class="perfil">
               <a href="#">
@@ -68,57 +79,52 @@
       <!-- Separador -->
       <div class="separator"></div>
 
-      <div class="photos-mobile">
-        <!-- Botão Anterior -->
-        <button class="previous" id="prevBtn">
-          <img src="assets/icons/icon-previous.svg" alt="Anterior">
-        </button>
-
-        <!-- Imagens Produto -->
-        <img id="mainPhoto" src="assets/images/image-product-1.jpg" alt="Tenis casual">
-
-        <!-- Botão Próximo -->
-        <button class="next" id="nextBtn">
-          <img src="assets/icons/icon-next.svg" alt="Próximo">
-        </button>
-      </div>
-
-      <aside class="info-product">
-        <span>Sneaker Company</span>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>
-          These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.
-        </p>
-
-        <!-- Preço -->
-        <div class="price">
-          <h1>$125.00<span class="percent">50%</span></h1>
-          <span class="price-full">$250.00</span>
-        </div>
-
-        <!-- Quantidade -->
-        <div class="quantity-selector">
-          <!-- Diminuir -->
-          <button class="decrease">
-            <img src="assets/icons/icon-minus.svg" alt="diminuir">
+      <div class="description">
+        <div class="photos-mobile">
+          <!-- Botão Anterior -->
+          <button class="previous" id="prevBtn">
+            <img src="assets/icons/icon-previous.svg" alt="Anterior">
           </button>
-          
+          <!-- Imagens Produto -->
+          <img id="mainPhoto" src="assets/images/image-product-1.jpg" alt="Tenis casual">
+          <!-- Botão Próximo -->
+          <button class="next" id="nextBtn">
+            <img src="assets/icons/icon-next.svg" alt="Próximo">
+          </button>
+        </div>
+        <aside class="info-product">
+          <span>Sneaker Company</span>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+          <!-- Preço -->
+          <div class="price">
+            <h1>$125.00<span class="percent">50%</span></h1>
+            <span class="price-full">$250.00</span>
+          </div>
           <!-- Quantidade -->
-          <span class="quantity">1</span>
-
-          <!-- Aumentar -->
-          <button class="increase">
-            <img src="assets/icons/icon-plus.svg" alt="aumentar">
+          <div class="quantity-selector">
+            <!-- Diminuir -->
+            <button class="decrease">
+              <img src="assets/icons/icon-minus.svg" alt="diminuir">
+            </button>
+        
+            <!-- Quantidade -->
+            <span class="quantity">1</span>
+            <!-- Aumentar -->
+            <button class="increase">
+              <img src="assets/icons/icon-plus.svg" alt="aumentar">
+            </button>
+          </div>
+          <!-- Adicionar ao carrinho -->
+          <button class="btn-add-cart">
+            <img src="assets/icons/icon-btn-cart.svg" alt="">
+            <span>Add to cart</span>
           </button>
-        </div>
-
-        <!-- Adicionar ao carrinho -->
-         <button class="btn-add-cart">
-          <img src="assets/icons/icon-btn-cart.svg" alt="">
-          <span>Add to cart</span>
-         </button>
-      </aside>
+        </aside>
+      </div>
     </main>
   <script type="module" src="scripts/main.js"></script>
   </body>
